@@ -1,0 +1,213 @@
+.footer{
+	margin:0px 0px 0px 180px; 
+	background:black;
+}
+.footer .ourwork> h2{
+ color:silver;
+}
+.footer .mywork{
+	display:flex;
+	flex-wrap: wrap;
+	border:1px solid white;
+	border-radius:10px;
+	width:60vw;
+}
+.footer .mywork .project{
+ color:white;
+ padding:0 20px;
+ width:55vw;
+}
+.footer .mywork .project h3{
+	text-align: center;
+}
+.footer .mywork .BackendFrontend{
+	border-bottom:2px solid midnightblue;
+}
+.footer .mywork .BackendFrontend h5{
+	color:silver;
+}
+
+.footer .mywork .Frontend h5{
+	color:silver;
+}
+.footer .mywork .front{
+	/*display:grid;
+	grid-template-columns:auto auto auto;
+	grid-gap: 10px;*/
+ display:flex;
+ flex-direction: column;
+  border-radius: 10px;
+  padding:0px 5px;
+}
+.footer .mywork .front>p{
+	margin:10px;
+}
+.footer .mywork .front h5{margin:0px;}
+.footer .mywork .front>*{
+	color:white;
+	text-align: center;
+}
+
+.footer .mywork img{
+	width:20px;
+}
+/*skills*/
+.footer .ourskill>h2{
+	color:silver;
+	font-family: monospace;
+}
+.footer .skills{
+	color:white;
+	margin:10px 0 0 40px;
+	text-align: center;
+	width:600px;
+	background:silver;
+	color:midnightblue;
+	font-variant: small-caps;
+	box-shadow:1px 1px 1.5px rgba(273,273,273,0.5), -1px -1px 1px rgba(273,273,273,0.5);
+}
+.footer .skills>.skillImage>img{
+	width:100%;
+}
+.footer .skills>.skill p{
+	padding:10px;
+	background:royalblue;
+	margin:-10px;
+	border-radius:10px;
+}
+
+.footer .skills>.skill em{
+	color:royalblue;
+}
+/*about*/
+.footer .about{
+	margin-left:40px;
+	width:500px;
+	color:white;
+}
+.footer .about>h2{
+	color:silver;
+	text-align: center;
+	margin-bottom:10px;
+}
+.footer .about>p{
+	color:silver;
+	font-family: cursive,helvetica neue,sans-serif
+}
+
+.footer .about>p:before{
+	content:".";
+	padding:5px;
+	width:10px;
+	height:10px;
+	color:blue;
+	border-radius: 50%;
+}
+.footer .about .abouthead::before{
+	content:"";
+	padding:0;
+}
+.footer .about>.myarticle{
+	color:snow;
+	text-align: center;
+	word-wrap: break-word;
+}
+.footer .about>.myarticle::before{
+	content:"";
+}
+/*contact*/
+.footer .contact{
+	width:500px;
+	margin-left:40px;
+	color:silver;
+}
+
+.footer .contact>h2{
+	text-align:center;
+}
+.footer .contact>p>input{
+	padding:10px;
+	width:80%;
+	border-radius:5px;
+}
+.footer .contact>p::before{
+ content:".";
+ padding:5px;
+ width:10px;height:10px;
+ color:midnightblue;
+ border-radius: 50%;
+}
+.footer .contact> .headcontact{
+	padding:0
+}
+.footer .contact> .headcontact::before{
+	content:"";padding:0;width:0;height: 0;
+}
+.footer .contact>.contactinput::before{
+	content:"";
+}
+.footer .contact>p>input:focus{
+	outline:none;
+}
+.footer .contact>p>input[type="submit"]{
+	width:50%;
+    border:1px solid white;
+    background:black;
+    font-family: monospace;
+	color:white;
+	border-radius:3px;
+}
+.footer .contact>p>input[type="submit"]:hover{
+	background-color:midnightblue;
+	border-color:black;
+}
+.footer .contact>p>input[type="submit"]:active{
+	background-color:midnightblue;
+	border-color:black;
+	position:relative;
+	top:2px;left:2px;
+}
+/*footer bottom*/
+.footer .footerbottom{
+	background:midnightblue;
+	width:100%;
+}
+.footer .footerbottom footer{
+	padding:1.5px;
+	text-align:center;
+}
+.footer .footerbottom footer>p{
+  color:white;
+  font-family: monospace;
+  color:sandybrown;
+}
+@media only screen and (max-width:820px){
+	.footer .skills,.footer .contact, .footer .about,.footer .mywork{width:400px;margin-left:10px;} 
+	.footer .mywork>.project{width:100%;}
+	
+}
+@media only screen and (max-width:602px){
+	.footer{margin-left: 0px}
+	.footer .skills,.footer .contact, .footer .about,.footer .mywork{margin:auto;}
+	.footer .ourwork> h2,.footer .ourskill> h2{text-align: center;color:silver;}
+	.footer .ourwork> p,.footer .about>.abouthead,.footer .ourskill>p,.footer .contact>.headcontact{padding-top:3vh;}
+
+}
+@media only screen and (max-width:440px){
+	.footer .skills,.footer .contact, .footer .about,.footer .mywork{width:80vw;}
+	.footer .mywork .front{display: flex;flex-direction:column;flex-wrap: wrap;}
+	.footer .mywork .front em{font-size:11px;}
+	.footer .mywork .project a{font-size:13px;}
+	.footer .mywork .BackendFrontend em{font-size:11px;}
+}
+@media only screen and (max-width:260px){
+	.footer .skills,.footer .contact, .footer .about, .footer .footerbottom footer>p{font-size:4vw;} 
+	.footer .skill>h6{font-size:4vw;}
+	.footer .contact>p>input{font-size:3vw;}
+	.footer .mywork .BackendFrontend em{font-size:12px;}
+}
+@media only screen and (max-width:150px){
+	.footer{position: relative;top:30px;}
+	.footer .contact>p{width:60vw;}
+	.footer .contact,.footer .footerbottom{position:relative; top:10px;}
+}

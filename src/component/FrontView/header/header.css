@@ -1,0 +1,76 @@
+.header{
+  margin:60px auto;
+  margin-bottom: 0px;
+  margin-left:160px;
+  margin-top:0px;
+  height:450px;
+  background-image: url(img/mac.jpg);
+  background-position:center;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+
+.header .header_box{
+	width:300px;
+	margin:auto;
+	border:1px solid black;
+	position: relative;
+	top:150px;
+}
+.header .header_box>*{
+	text-align:center;
+}
+.header .header_box > h4{
+	color:black;
+	font-weight: bolder;
+	font-size:30px;
+	text-shadow:1px 1px 1px royalblue;
+}
+.header .header_box >h5{
+	color:black;
+	font-size:15px;
+	text-shadow:1px 1px 1px sandybrown;
+}
+.header .headfooter{
+	position:relative;
+	top:220px;
+	width:220px;
+	margin:auto;
+}
+.header a{
+	text-decoration: none
+}
+.header .headfoot{
+	color:White;
+	background:royalblue;
+	margin:auto;
+	width:200px;
+	margin:auto;
+	text-align:center;
+	padding:10px;
+	font-family: sans-serif;
+	border-radius: 3px;
+}
+.header a:hover .headfoot{
+	background:black;
+	color:royalblue;
+}
+
+@media only screen and (max-width:602px){
+	.header{margin:0px;height: 90vw}
+	.header .header_box{width:50vw;top:90px;}
+	.header .header_box >h4{font-size:5vw;}
+	.header .header_box >h5{font-size:4vw;}
+	.header .headfooter{top:130px;}
+}
+@media only screen and (max-width:440px){
+   .header{height: 300px}
+   .header .headfoot{top:120px;}
+   .header .headfoot{width:40vw;font-size:3vw;}
+}
+@media only screen and (max-width:270px){
+	.header{height:70vw;}
+	.header .header_box,.header .headfooter{top:20vw;width:100%;}
+	.header .headfoot{padding:2vw;}
+}
