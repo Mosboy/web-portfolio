@@ -1,9 +1,39 @@
 import React, { Component } from "react";
 
 import skillsImage from "./img/webdev.jpg"
-
+import prev from "./img/circled-chevron-left.png"
+import next from "./img/circled-chevron-right.png"
+import clothing from "./template/clothing.png"
+import blog from "./template/blog.png"
+import blog1 from "./template/blog1.jpg"
+import blog2 from "./template/blog2.jpg"
+import blog3 from "./template/blog3.png"
+import bounty from "./template/bounty.jpg"
 import "./footer.css";
 
+const url_to_project = [
+		// "https://mosboychatapp.netlify.app",
+		// "https://mosboyfacerecognition.netlify.app",
+		// "https://orderfishapp.netlify.app",
+		// "https://mosboycompany.netlify.app",
+		// "https://mosboyemail.netlify.app",
+		// "https://mosboymobile.netlify.app",
+		// "https://mosboyroughwork.netlify.app",
+		// "https://mosboytip-calculator.netlify.app",
+		clothing,blog,blog1,blog2,blog3,bounty
+    ]
+const nameofpage = [
+    // "Chat application",
+    // "FaceRecognition application",
+    // "OrderFish application",
+    // "Blog Site",
+    // "Cloned email site",
+    // "Mobile Flex Layout site",
+    // "Flex Template",
+	// "Tip calculator",
+     ]
+let flag = 0;
+let nofpage = 1;
 class Footer extends Component {
 	constructor(props) {
 		super();
@@ -11,10 +41,18 @@ class Footer extends Component {
 			name:"", 
 			email:"",
 			subject:"",
-			message:""
+			message:"",
+			url_to_project: "",
+			url_to_project2: ""
 		}
 	}
-
+	componentDidMount(){
+		this.setState({url_to_project:url_to_project[flag]})
+		setInterval(()=>this.goToNextProject("next"),15000)
+	}
+    componentDidUpdate(){
+    	const getIframe = document.querySelectorAll("dyiframe")
+    }
 	callFetchFunction=()=>{
 		fetch("https://mosboyportfolio.herokuapp.com",{
 			method:"post",
@@ -29,6 +67,34 @@ class Footer extends Component {
 		const getallInput = document.querySelectorAll("input")
 		getallInput.forEach(a=> a.type != "submit" ? a.value="" : null )
 	}
+	goToNextProject=(e)=>{
+	try {
+	        if(/next/.test(e)){
+	        	flag ++;
+	        	nofpage ++;
+	        	if(url_to_project[flag] === undefined){
+	        		flag = 0;
+	        		nofpage = 1;
+	        		this.setState({url_to_project:url_to_project[flag]})
+	        	}else{
+	        		this.setState({url_to_project:url_to_project[flag]})
+	        	}
+	        	
+	        }else if(/prev/.test(e)){
+	        	flag -=1;
+	        	nofpage -=1;
+	        	if(url_to_project[flag] === undefined){
+	        		flag = (url_to_project.length - 1);
+	        		nofpage = url_to_project.length
+	        		this.setState({url_to_project:url_to_project[flag]})
+	        	}else{
+	        		this.setState({url_to_project:url_to_project[flag]})
+	        	}
+	         }
+		   }catch(err){
+			console.log(err)
+		}
+	}
 
 	render() {
 		const{setOpacity} = this.props;
@@ -38,60 +104,26 @@ class Footer extends Component {
 			         <p id="mywork"></p>
 			         <h2>MY WORK</h2>
 			         <div className="mywork">
-					    <div class="BackendFrontend project">
-					      <h3>Dynamic sites</h3>
-					      <div class="BF">
-					      <p>
-					      <h5>Chat Web App 	&#8592;</h5>
-					      <em>This web application allows you to do real time communication</em> <a href="https://mosboychatapp.netlify.app">go to page</a>
-					      </p>
-					      <p>
-					      <h5>Order Sale App  &#8592;</h5>
-					       <em>This web application/websites allow one a user to sign up with his or her social media account and order saled fish from the online market</em> <a href="https://orderfishapp.netlify.app">go to page</a>
-					       </p>
-					       <p>
-					       <h5>FaceRecognition AI App &#8592;</h5>
-					       <em> This application takes an online image url and return the image, indicating the position of the face on the image</em> <a href="https://mosboyfacerecognition.netlify.app">go to page</a>
-					       </p>
+					      <div className="BF">
+				   <img className="iframe" src={this.state.url_to_project} alt="template" style={{width:"100%"}}/>
 					       </div>
-					    </div>
-					    <div class="Frontend project">
-					    <h3>Static sites</h3>
-					    <div className="front">
-					    <p>
-					      <h5>Blog &#8592;</h5>
-					      <em style={{display:"block"}} >Blog film Advertisement site. </em><a href="https://mosboycompany.netlify.app" >go</a>
-					      </p>
-					      <p>
-					      <h5>Email &#8592;</h5>
-					      <em>Cloned email site. </em><a href="https://mosboyemail.netlify.app">go</a>
-					      </p>
-					      <p>
-					      <h5>Mobile &#8592;</h5>
-					      <em>Mobile Flex layout site. </em><a href="https://mosboymobile.netlify.app">go</a>
-					      </p>
-					      <p>
-	                       <h5>Flex Template &#8592;</h5>
-					      <em>A fun site, nothing too serious. </em><a href="https://mosboyroughwork.netlify.app">go</a>
-					      </p>
-					      <p>
-
-					      <h5>Tip Calculator &#8592;</h5>
-					      <em>A site that help calculate your tip from a bill to be paid. </em><a href="https://mosboytip-calculator.netlify.app">go</a>
-					      </p>
-					      <p>
-					      <h5>Voiceinator &#8592;</h5>
-					      <em>A site that returns in voice what you input in text. <i style={{color:"yellow"}}> (use chrome browser only)</i></em>
-					         <a href="https://mosboyvoiceinator.netlify.app">go</a>
-					      </p>
-					      </div>
+					        <div className="underproject">
+					         <img src={prev} className="change prev" onClick = {() => this.goToNextProject("prev")}/>
+						       <div className = "changeproject">
+						           
+						            <p className= "nofpage">{nofpage}</p>
+						       		<p className="nameofpage">{nameofpage[flag]}</p>
+						       		<p className= "nameoflink"><a href= {url_to_project[flag]}>view page</a></p>
+						       </div>
+						      <img src={next} className="change next" onClick = {() => this.goToNextProject("next")}/>
+						     </div>
 					    </div>
 					 </div>
-			    </div>
+			  
 
 			    	<div className="ourskill">
 					 <p id="skills"></p>
-					 <h2>WEB DEV SKILL</h2>
+					 <h2>WEB SKILL</h2>
 				    <div className="skills">
 				      <div className="skillImage"><img src={skillsImage} alt="skillsImage"/>
 				      <p>My skills in the field</p></div>
@@ -146,11 +178,11 @@ class Footer extends Component {
 					<p className="contactinput"><input name="email" type="email" placeholder="Email" onChange={(e)=>this.setState({email:e.target.value})}/></p>
 					<p className="contactinput"><input name="subject" type="text" placeholder="Subject" onChange={(e)=>this.setState({subject:e.target.value})}/></p>
 					<p className="contactinput"><input name="message" type="text" placeholder="Message me" onChange={(e)=>this.setState({message:e.target.value})}/></p>
-                    <p className="contactinput"><input type="submit" value="Send message" onClick={this.callFetchFunction}/></p>
+                    <p className="contactinput"><input type="submit" value="Send message" onClick={this.callFetchFunction}/></p> 
 
 				</div>
 				<div className="footerbottom">
-				<footer><p><i>&copy; Mosboy 2020</i></p></footer>
+				<footer><p><i>Mgenius {new Date().getFullYear() }</i></p></footer>
 				</div>
 			</div>
 		);

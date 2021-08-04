@@ -1,5 +1,12 @@
 .frontview{
-	width:100%;
 	display:inline-block;
-	background:black;
+	background-size:contain;
+	background-repeat:repeat;
+	margin:auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position:relative;
+	width:100%;
+}
+@media only screen and (max-width:602px){
+ .frontview{width:100vw}
 }

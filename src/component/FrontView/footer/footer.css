@@ -1,28 +1,99 @@
 .footer{
-	margin:0px 0px 0px 180px; 
-	background:black;
+	margin:0px 0px 0px 26vw; 
+}
+.footer .ourwork{
+	width:500px;
+	margin:auto;
 }
 .footer .ourwork> h2{
  color:silver;
+ font-family: monospace;
 }
-.footer .mywork{
+/*.footer .mywork{
 	display:flex;
 	flex-wrap: wrap;
 	border:1px solid white;
 	border-radius:10px;
 	width:60vw;
+}*/
+.footer .mywork{
+	width:100%;
 }
 .footer .mywork .project{
  color:white;
- padding:0 20px;
- width:55vw;
+ margin:auto;
+}
+.footer .mywork .iframe{
+	border:none;
+	height:auto;
+	min-height:300px;
+	max-height: 500px;
+	width:auto;
+	scroll-behavior: smooth;
+}
+.footer .mywork .BF{
+	 display:flex;
+	 justify-content: center;
+	 align-items: center;
+}
+/*.footer .mywork .change{
+	  flex-basis: 100%;
+	  cursor:pointer;
+	  width: 5vw;
+}*/
+.footer .mywork .underproject{
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer .mywork .underproject .change{
+	cursor: pointer;
+	width:30px;
+}
+.footer .mywork .changeproject{
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items:flex-end;
+}
+
+.footer .mywork .changeproject > *{
+    padding:0 1px;
+    margin: 3px 4px;
+}
+
+.footer .mywork .changeproject>.nofpage{
+	box-sizing:border-box;
+	background:white;
+	color:black;
+	font-family:monospace;
+/*	width:25px;height:25px;*/
+	padding:1px 5.5px;
+	border-radius:50%;
+}
+.footer .mywork .changeproject > .nameofpage{
+	font-family: monospace;
+	text-align: center;
+/*	border-bottom: 3px solid blue;*/
+}
+.footer .mywork .changeproject > .nameoflink > a{
+	 text-decoration: none;
+    font-family: monospace;
+    color: white;
+    background-color: #194de280;
+    background: #1b49af;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 .footer .mywork .project h3{
+	font-family: 'Parisienne', cursive;
 	text-align: center;
 }
-.footer .mywork .BackendFrontend{
+/*.footer .mywork .BackendFrontend{
 	border-bottom:2px solid midnightblue;
-}
+}*/
 .footer .mywork .BackendFrontend h5{
 	color:silver;
 }
@@ -34,10 +105,8 @@
 	/*display:grid;
 	grid-template-columns:auto auto auto;
 	grid-gap: 10px;*/
- display:flex;
- flex-direction: column;
-  border-radius: 10px;
-  padding:0px 5px;
+    display:flex;
+    align-items: center;
 }
 .footer .mywork .front>p{
 	margin:10px;
@@ -52,6 +121,10 @@
 	width:20px;
 }
 /*skills*/
+.footer .ourskill{
+	width:500px;
+	margin:auto;
+}
 .footer .ourskill>h2{
 	color:silver;
 	font-family: monospace;
@@ -60,11 +133,11 @@
 	color:white;
 	margin:10px 0 0 40px;
 	text-align: center;
-	width:600px;
 	background:silver;
 	color:midnightblue;
 	font-variant: small-caps;
 	box-shadow:1px 1px 1.5px rgba(273,273,273,0.5), -1px -1px 1px rgba(273,273,273,0.5);
+	margin:auto;
 }
 .footer .skills>.skillImage>img{
 	width:100%;
@@ -84,6 +157,7 @@
 	margin-left:40px;
 	width:500px;
 	color:white;
+	margin:auto;
 }
 .footer .about>h2{
 	color:silver;
@@ -120,6 +194,7 @@
 	width:500px;
 	margin-left:40px;
 	color:silver;
+	margin:auto;
 }
 
 .footer .contact>h2{
@@ -150,12 +225,13 @@
 	outline:none;
 }
 .footer .contact>p>input[type="submit"]{
-	width:50%;
-    border:1px solid white;
-    background:black;
+    width: 50%;
+    border: 1px solid #0a0303;
+    background: #1b49af;
     font-family: monospace;
-	color:white;
-	border-radius:3px;
+    color: white;
+    border-radius: 3px;
+    cursor:pointer;
 }
 .footer .contact>p>input[type="submit"]:hover{
 	background-color:midnightblue;
@@ -181,6 +257,9 @@
   font-family: monospace;
   color:sandybrown;
 }
+@media only screen and (min-width:800px){
+	.footer .ourwork,.footer .ourskill,.footer .about, .footer .contact{width:100%;}
+}
 @media only screen and (max-width:820px){
 	.footer .skills,.footer .contact, .footer .about,.footer .mywork{width:400px;margin-left:10px;} 
 	.footer .mywork>.project{width:100%;}
@@ -188,17 +267,21 @@
 }
 @media only screen and (max-width:602px){
 	.footer{margin-left: 0px}
-	.footer .skills,.footer .contact, .footer .about,.footer .mywork{margin:auto;}
+	.footer .skills,.footer .contact, .footer .about,.footer .mywork{margin:auto; width:80vw}
 	.footer .ourwork> h2,.footer .ourskill> h2{text-align: center;color:silver;}
 	.footer .ourwork> p,.footer .about>.abouthead,.footer .ourskill>p,.footer .contact>.headcontact{padding-top:3vh;}
 
 }
 @media only screen and (max-width:440px){
-	.footer .skills,.footer .contact, .footer .about,.footer .mywork{width:80vw;}
+	.footer .skills,.footer .contact, .footer .about,.footer .mywork{width:95vw;margin:auto;height:auto}
+	.footer .ourwork, .footer .ourskill{width:auto;height:auto;}
 	.footer .mywork .front{display: flex;flex-direction:column;flex-wrap: wrap;}
 	.footer .mywork .front em{font-size:11px;}
 	.footer .mywork .project a{font-size:13px;}
 	.footer .mywork .BackendFrontend em{font-size:11px;}
+	/*.footer .mywork .changeproject>.nofpage{width:18px;height:18px;font-size:10px;}*/
+	.footer .mywork .changeproject>.nameofpage{font-size:10px;word-wrap: }
+	.footer .mywork .changeproject>.nameoflink{font-size:10px;}
 }
 @media only screen and (max-width:260px){
 	.footer .skills,.footer .contact, .footer .about, .footer .footerbottom footer>p{font-size:4vw;} 

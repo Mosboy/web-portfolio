@@ -13,9 +13,8 @@ class Frontview extends Component {
 		};
 	}
 	setOpacity = () => {
-		console.log("moses is a kid");
 		if (this.state.setOpacity) this.setState({ setOpacity: false });
-		else {
+		else { 
 			this.setState({ setOpacity: true });
 		}
 	};

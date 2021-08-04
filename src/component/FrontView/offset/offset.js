@@ -19,15 +19,10 @@ class Offset extends Component{
 				 <p>Custom websites according to client requirements</p>
 				 <p>Communication system platform for users</p>
 				 <p>Content management system</p>
-				 <p>Updating user content/post to an existing website</p>
-				
-				 <p>Adding value to your existing website/webapp</p>
 				 <p>Online marketing site</p>
-				 <p>A website for school management system</p>
-				 <p>Working with a team to achieve a well refined webapp.</p>
 				 </div>
 				 </div>
-		       )
+		       )           
 	}
 }
 export default Offset

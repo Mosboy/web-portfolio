@@ -1,15 +1,15 @@
 .offset{
-	background:linear-gradient(black,midnightblue);
-	width:100%;
-	position:absolute;
-	z-index: 1;
-	top:0px;
+	/* background: linear-gradient(#151313,#0a0a0a); */
+    /* position: absolute;
+    z-index: 1; */
 }
 .offset h1{
 	text-align: right;
 	color:white;
 	margin:10px;
 	cursor:pointer;
+	position:relative;
+	z-index:1;
 }
 .offset h1:hover, .offset h1:active{
 	color:darkred;
@@ -17,15 +17,14 @@
 .offset .myoffer{
 	transform: translateY(-60px);
 	color:white;
-	background:linear-gradient(royalblue,midnightblue);
-	background:white;
+	background-color: #151313;
 	width:400px;
 	margin:auto;
 }
 .offset .myoffer>p{
-    color:white;
+    color: white;
     font-weight: bolder;
-    text-shadow: 1px 1px 3px darkblue , 1px 1px 1px midnightblue;
+    text-shadow: 1px 1px 2px #c0c0d4, 1px 1px 1px midnightblue;
     font-family: helvetica neue;
     text-align: center;
 }

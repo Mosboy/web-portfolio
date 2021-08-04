@@ -1,12 +1,13 @@
 .header{
   margin:60px auto;
   margin-bottom: 0px;
-  margin-left:160px;
+  margin-left:25vw;
   margin-top:0px;
   height:450px;
-  background-image: url(img/mac.jpg);
+  background-image: url(img/christiana.jpg);
   background-position:center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   opacity: 0.5;
 }
 
@@ -14,42 +15,44 @@
 .header .header_box{
 	width:300px;
 	margin:auto;
-	border:1px solid black;
+	border:3px solid rgba(0, 132, 255, 0.3);
+	box-shadow:0px 0px 1px 1px solid grey; 
+	padding:5px;
 	position: relative;
-	top:150px;
+	top:100px;
 }
 .header .header_box>*{
 	text-align:center;
 }
 .header .header_box > h4{
-	color:black;
-	font-weight: bolder;
-	font-size:30px;
-	text-shadow:1px 1px 1px royalblue;
+	color: rgba(255, 255, 255, 0.27);
+    font-weight: bolder;
+    font-size: 30px;
+    text-shadow: 6px -1px 5px rgba(0, 113, 219, 0.5);
+    background: rgba(0, 132, 255, 0.06)
 }
 .header .header_box >h5{
-	color:black;
-	font-size:15px;
-	text-shadow:1px 1px 1px sandybrown;
+	color: black;
+    font-size: 20px;
+    text-shadow:2px -1px 3px rgba(52, 139, 193, 0.73)
+   
 }
 .header .headfooter{
 	position:relative;
-	top:220px;
-	width:220px;
 	margin:auto;
+	top:200px;
 }
 .header a{
 	text-decoration: none
 }
 .header .headfoot{
 	color:White;
-	background:royalblue;
+	background: #1b49af;
 	margin:auto;
 	width:200px;
 	margin:auto;
 	text-align:center;
-	padding:10px;
-	font-family: sans-serif;
+	padding:10px 0px;
 	border-radius: 3px;
 }
 .header a:hover .headfoot{
@@ -70,7 +73,7 @@
    .header .headfoot{width:40vw;font-size:3vw;}
 }
 @media only screen and (max-width:270px){
-	.header{height:70vw;}
-	.header .header_box,.header .headfooter{top:20vw;width:100%;}
+	/* .header{height:70vw;} */
+	/* .header .header_box,.header .headfooter{top:20vw;width:100%;} */
 	.header .headfoot{padding:2vw;}
 }

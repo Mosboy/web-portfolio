@@ -3,7 +3,6 @@ import "./header.css"
 class Header extends Component{
 	constructor(props){
 		super();
-		
 	}
 	
 
